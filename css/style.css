@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap');
+
+:root {
+  --page-1-color: #6c5ce7;
+  --page-2-color: #0984e3;
+  --page-3-color: #d63031;
+  --page-4-color: #00b894;
+
+  --animate-speed: 2s;
+
+  --color-light: #dfe6e9;
+  --color-dark: #2d3436;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.4;
+  color: var(--color-light);
+  overflow: hidden;
+}
+
+/*Page Colors*/
+#page-1 {
+  background-color: var(--page-1-color);
+}
+#page-2 {
+  background-color: var(--page-2-color);
+}
+#page-3 {
+  background-color: var(--page-3-color);
+}
+#page-4 {
+  background-color: var(--page-4-color);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 4rem;
+}
+
+.page h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 1rem;
+}
+
+.page p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  text-decoration: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  transition: all 0.3s ease-in;
+}
+
+.btn:hover,
+.btn-dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.btn-dark:hover {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+/*Page Animation*/
+#page-1 h1 {
+  transform: translateY(-1200px);
+  animation: heading var(--animate-speed) forwards ease-in;
+}
+
+#page-1 p {
+  transform: translateX(-1800px);
+  animation: text var(--animate-speed) forwards ease-in 2s;
+}
+
+/*Keyframes*/
+@keyframes heading {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes text {
+  to {
+    transform: translateX(0);
+  }
+}
